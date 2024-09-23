@@ -33,7 +33,7 @@ class GHTextField: UITextField {
         minimumFontSize = 12
         backgroundColor = .tertiarySystemBackground
         autocorrectionType = .no
-        
+        returnKeyType = .go
         placeholder = "Enter a username"
     }
     

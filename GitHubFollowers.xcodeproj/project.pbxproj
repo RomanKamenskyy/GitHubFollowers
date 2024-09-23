@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		302DF44F2C979BDB00FD5D1B /* FollowersListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302DF44E2C979BDB00FD5D1B /* FollowersListVC.swift */; };
 		30804BEF2C90BF2400FA7398 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30804BEE2C90BF2400FA7398 /* AppDelegate.swift */; };
 		30804BF12C90BF2400FA7398 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30804BF02C90BF2400FA7398 /* SceneDelegate.swift */; };
 		30804BF62C90BF2400FA7398 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 30804BF52C90BF2400FA7398 /* Base */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		302DF44E2C979BDB00FD5D1B /* FollowersListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersListVC.swift; sourceTree = "<group>"; };
 		30804BEB2C90BF2400FA7398 /* GitHubFollowers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubFollowers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30804BEE2C90BF2400FA7398 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30804BF02C90BF2400FA7398 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				30ABBD112C91CDD900F9349C /* FavoriteVC.swift */,
 				30ABBD132C923F5100F9349C /* GHButton.swift */,
 				30ABBD152C924E2C00F9349C /* GHTextField.swift */,
+				302DF44E2C979BDB00FD5D1B /* FollowersListVC.swift */,
 			);
 			path = GitHubFollowers;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				30ABBD142C923F5100F9349C /* GHButton.swift in Sources */,
+				302DF44F2C979BDB00FD5D1B /* FollowersListVC.swift in Sources */,
 				30ABBD122C91CDD900F9349C /* FavoriteVC.swift in Sources */,
 				30ABBD162C924E2C00F9349C /* GHTextField.swift in Sources */,
 				30ABBD102C91CDA600F9349C /* SearchVC.swift in Sources */,
