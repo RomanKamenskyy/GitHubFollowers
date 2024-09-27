@@ -13,6 +13,10 @@ class SearchVC: UIViewController {
     let usernametextField = GHTextField()
     let actionButton = GHButton(backgroundColor: .systemGreen, title: "Get followers")
     
+    var isUsernamePressed: Bool {
+        !usernametextField.text!.isEmpty
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +40,10 @@ class SearchVC: UIViewController {
     
     @objc func pushFollowersListVC() {
         
+        guard isUsernamePressed else {
+            presentGHAlertOnMainThread(title: "Empty username", message: "Please enter a username. We need to know who to look for.😃", buttonTitle: "OK")
+            return
+        }
         let followersListVC = FollowersListVC()
         followersListVC.username = usernametextField.text
         followersListVC.title = usernametextField.text
