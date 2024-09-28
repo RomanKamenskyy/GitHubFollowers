@@ -3,19 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		302DF44F2C979BDB00FD5D1B /* FollowersListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302DF44E2C979BDB00FD5D1B /* FollowersListVC.swift */; };
 		30515F5E2CA6B58F00C8E5E5 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30515F5D2CA6B58F00C8E5E5 /* UIViewController+Ext.swift */; };
 		30804BEF2C90BF2400FA7398 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30804BEE2C90BF2400FA7398 /* AppDelegate.swift */; };
 		30804BF12C90BF2400FA7398 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30804BF02C90BF2400FA7398 /* SceneDelegate.swift */; };
 		30804BF62C90BF2400FA7398 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 30804BF52C90BF2400FA7398 /* Base */; };
 		30804BF82C90BF2600FA7398 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30804BF72C90BF2600FA7398 /* Assets.xcassets */; };
 		30804BFB2C90BF2600FA7398 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 30804BFA2C90BF2600FA7398 /* Base */; };
-		30ABBD102C91CDA600F9349C /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30ABBD0F2C91CDA600F9349C /* SearchVC.swift */; };
-		30ABBD122C91CDD900F9349C /* FavoriteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30ABBD112C91CDD900F9349C /* FavoriteVC.swift */; };
 		30ABBD142C923F5100F9349C /* GHButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30ABBD132C923F5100F9349C /* GHButton.swift */; };
 		30ABBD162C924E2C00F9349C /* GHTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30ABBD152C924E2C00F9349C /* GHTextField.swift */; };
 		30F2B3792CA1AEA900FA05E7 /* GHTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F2B3782CA1AEA900FA05E7 /* GHTitleLabel.swift */; };
@@ -24,7 +21,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		302DF44E2C979BDB00FD5D1B /* FollowersListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersListVC.swift; sourceTree = "<group>"; };
 		30515F5D2CA6B58F00C8E5E5 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		30804BEB2C90BF2400FA7398 /* GitHubFollowers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubFollowers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30804BEE2C90BF2400FA7398 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -33,14 +29,16 @@
 		30804BF72C90BF2600FA7398 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		30804BFA2C90BF2600FA7398 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		30804BFC2C90BF2600FA7398 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		30ABBD0F2C91CDA600F9349C /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
-		30ABBD112C91CDD900F9349C /* FavoriteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteVC.swift; sourceTree = "<group>"; };
 		30ABBD132C923F5100F9349C /* GHButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHButton.swift; sourceTree = "<group>"; };
 		30ABBD152C924E2C00F9349C /* GHTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHTextField.swift; sourceTree = "<group>"; };
 		30F2B3782CA1AEA900FA05E7 /* GHTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHTitleLabel.swift; sourceTree = "<group>"; };
 		30F3A7B72CA2FFC100547DC2 /* GHBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHBodyLabel.swift; sourceTree = "<group>"; };
 		30F3A7B92CA300A300547DC2 /* GHAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHAlertVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		30201CCF2CA7F29D0064F8BC /* Screens */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Screens; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		30804BE82C90BF2400FA7398 /* Frameworks */ = {
@@ -53,6 +51,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		30201CD02CA7F30E0064F8BC /* Custom  Views */ = {
+			isa = PBXGroup;
+			children = (
+				30ABBD132C923F5100F9349C /* GHButton.swift */,
+				30ABBD152C924E2C00F9349C /* GHTextField.swift */,
+				30F2B3782CA1AEA900FA05E7 /* GHTitleLabel.swift */,
+				30F3A7B72CA2FFC100547DC2 /* GHBodyLabel.swift */,
+				30F3A7B92CA300A300547DC2 /* GHAlertVC.swift */,
+			);
+			path = "Custom  Views";
+			sourceTree = "<group>";
+		};
+		30201CD12CA7F3820064F8BC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				30515F5D2CA6B58F00C8E5E5 /* UIViewController+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		30201CD22CA7F64E0064F8BC /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				30804BEE2C90BF2400FA7398 /* AppDelegate.swift */,
+				30804BF02C90BF2400FA7398 /* SceneDelegate.swift */,
+				30804BF42C90BF2400FA7398 /* Main.storyboard */,
+				30804BF72C90BF2600FA7398 /* Assets.xcassets */,
+				30804BF92C90BF2600FA7398 /* LaunchScreen.storyboard */,
+				30804BFC2C90BF2600FA7398 /* Info.plist */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
 		30804BE22C90BF2400FA7398 = {
 			isa = PBXGroup;
 			children = (
@@ -72,21 +103,10 @@
 		30804BED2C90BF2400FA7398 /* GitHubFollowers */ = {
 			isa = PBXGroup;
 			children = (
-				30804BEE2C90BF2400FA7398 /* AppDelegate.swift */,
-				30804BF02C90BF2400FA7398 /* SceneDelegate.swift */,
-				30804BF42C90BF2400FA7398 /* Main.storyboard */,
-				30804BF72C90BF2600FA7398 /* Assets.xcassets */,
-				30804BF92C90BF2600FA7398 /* LaunchScreen.storyboard */,
-				30804BFC2C90BF2600FA7398 /* Info.plist */,
-				30ABBD0F2C91CDA600F9349C /* SearchVC.swift */,
-				30ABBD112C91CDD900F9349C /* FavoriteVC.swift */,
-				30ABBD132C923F5100F9349C /* GHButton.swift */,
-				30ABBD152C924E2C00F9349C /* GHTextField.swift */,
-				302DF44E2C979BDB00FD5D1B /* FollowersListVC.swift */,
-				30F2B3782CA1AEA900FA05E7 /* GHTitleLabel.swift */,
-				30F3A7B72CA2FFC100547DC2 /* GHBodyLabel.swift */,
-				30F3A7B92CA300A300547DC2 /* GHAlertVC.swift */,
-				30515F5D2CA6B58F00C8E5E5 /* UIViewController+Ext.swift */,
+				30201CD22CA7F64E0064F8BC /* Support */,
+				30201CD12CA7F3820064F8BC /* Extensions */,
+				30201CD02CA7F30E0064F8BC /* Custom  Views */,
+				30201CCF2CA7F29D0064F8BC /* Screens */,
 			);
 			path = GitHubFollowers;
 			sourceTree = "<group>";
@@ -105,6 +125,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				30201CCF2CA7F29D0064F8BC /* Screens */,
 			);
 			name = GitHubFollowers;
 			productName = GitHubFollowers;
@@ -163,11 +186,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				30ABBD142C923F5100F9349C /* GHButton.swift in Sources */,
-				302DF44F2C979BDB00FD5D1B /* FollowersListVC.swift in Sources */,
-				30ABBD122C91CDD900F9349C /* FavoriteVC.swift in Sources */,
 				30515F5E2CA6B58F00C8E5E5 /* UIViewController+Ext.swift in Sources */,
 				30ABBD162C924E2C00F9349C /* GHTextField.swift in Sources */,
-				30ABBD102C91CDA600F9349C /* SearchVC.swift in Sources */,
 				30804BEF2C90BF2400FA7398 /* AppDelegate.swift in Sources */,
 				30F3A7BA2CA300A300547DC2 /* GHAlertVC.swift in Sources */,
 				30F3A7B82CA2FFC100547DC2 /* GHBodyLabel.swift in Sources */,
