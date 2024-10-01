@@ -14,6 +14,7 @@
 		3064DA802CA9A42E00EEEF81 /* FollowersListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3064DA7D2CA9A42E00EEEF81 /* FollowersListVC.swift */; };
 		3064DA812CA9A42E00EEEF81 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3064DA7E2CA9A42E00EEEF81 /* SearchVC.swift */; };
 		3064DA842CAA0A0F00EEEF81 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3064DA832CAA0A0F00EEEF81 /* NetworkManager.swift */; };
+		3064DA882CAB0C9C00EEEF81 /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3064DA872CAB0C9C00EEEF81 /* ErrorMessage.swift */; };
 		30804BEF2C90BF2400FA7398 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30804BEE2C90BF2400FA7398 /* AppDelegate.swift */; };
 		30804BF12C90BF2400FA7398 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30804BF02C90BF2400FA7398 /* SceneDelegate.swift */; };
 		30804BF62C90BF2400FA7398 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 30804BF52C90BF2400FA7398 /* Base */; };
@@ -34,6 +35,7 @@
 		3064DA7D2CA9A42E00EEEF81 /* FollowersListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersListVC.swift; sourceTree = "<group>"; };
 		3064DA7E2CA9A42E00EEEF81 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		3064DA832CAA0A0F00EEEF81 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		3064DA872CAB0C9C00EEEF81 /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
 		30804BEB2C90BF2400FA7398 /* GitHubFollowers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubFollowers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30804BEE2C90BF2400FA7398 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30804BF02C90BF2400FA7398 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +120,14 @@
 			path = Screens;
 			sourceTree = "<group>";
 		};
+		3064DA862CAB0C8000EEEF81 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				3064DA872CAB0C9C00EEEF81 /* ErrorMessage.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		30804BE22C90BF2400FA7398 = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +147,7 @@
 		30804BED2C90BF2400FA7398 /* GitHubFollowers */ = {
 			isa = PBXGroup;
 			children = (
+				3064DA862CAB0C8000EEEF81 /* Utilities */,
 				3064DA852CAA0A1B00EEEF81 /* Screens */,
 				3064DA822CAA09E400EEEF81 /* Managers */,
 				30201CD32CA8747B0064F8BC /* Model */,
@@ -226,6 +237,7 @@
 				3064DA812CA9A42E00EEEF81 /* SearchVC.swift in Sources */,
 				30515F5E2CA6B58F00C8E5E5 /* UIViewController+Ext.swift in Sources */,
 				30ABBD162C924E2C00F9349C /* GHTextField.swift in Sources */,
+				3064DA882CAB0C9C00EEEF81 /* ErrorMessage.swift in Sources */,
 				30804BEF2C90BF2400FA7398 /* AppDelegate.swift in Sources */,
 				30201CD72CA8C2370064F8BC /* Follower.swift in Sources */,
 				30F3A7BA2CA300A300547DC2 /* GHAlertVC.swift in Sources */,
