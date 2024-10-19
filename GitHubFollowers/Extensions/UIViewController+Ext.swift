@@ -41,4 +41,17 @@ extension UIViewController {
         activityIndicator.startAnimating()
         
     }
+    func dismissLoadingView() {
+        DispatchQueue.main.async {
+            containerView.removeFromSuperview()
+            containerView = nil
+        }
+    }
+    
+    func showEmptySateView(with message: String, in view: UIView) {
+        let emptyStateView = GHEmptyState(message: message)
+        emptyStateView.frame = view.bounds
+        view.addSubview(emptyStateView)
+        
+    }
 }
