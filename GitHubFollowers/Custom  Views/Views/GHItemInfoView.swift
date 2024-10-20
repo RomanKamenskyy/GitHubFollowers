@@ -42,7 +42,7 @@ class GHItemInfoView: UIView {
             symbolImageView.widthAnchor.constraint(equalToConstant: 20),
             
             titleLabel.centerYAnchor.constraint(equalTo: symbolImageView.centerYAnchor),
-            titleLabel.leadingAnchor.constraint(equalTo: symbolImageView.trailingAnchor),
+            titleLabel.leadingAnchor.constraint(equalTo: symbolImageView.trailingAnchor, constant: 5),
             titleLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             
             countLabel.topAnchor.constraint(equalTo: symbolImageView.bottomAnchor, constant: 4),

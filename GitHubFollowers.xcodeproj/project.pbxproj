@@ -31,6 +31,8 @@
 		30BEFD0D2CC529F5002748A2 /* GHSecondaryTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BEFD0C2CC529F5002748A2 /* GHSecondaryTitleLabel.swift */; };
 		30BEFD0F2CC52AAF002748A2 /* GHItemInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BEFD0E2CC52AAF002748A2 /* GHItemInfoView.swift */; };
 		30BEFD112CC53DB8002748A2 /* GHItemInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BEFD102CC53DB8002748A2 /* GHItemInfoVC.swift */; };
+		30BEFD132CC55CE1002748A2 /* GHRepoItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BEFD122CC55CE1002748A2 /* GHRepoItemVC.swift */; };
+		30BEFD152CC56644002748A2 /* GHFollowerItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BEFD142CC56644002748A2 /* GHFollowerItemVC.swift */; };
 		30CF64DC2CC43B490096E272 /* UserInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CF64DB2CC43B490096E272 /* UserInfoVC.swift */; };
 		30F2B3792CA1AEA900FA05E7 /* GHTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F2B3782CA1AEA900FA05E7 /* GHTitleLabel.swift */; };
 		30F3A7B82CA2FFC100547DC2 /* GHBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F3A7B72CA2FFC100547DC2 /* GHBodyLabel.swift */; };
@@ -64,6 +66,8 @@
 		30BEFD0C2CC529F5002748A2 /* GHSecondaryTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHSecondaryTitleLabel.swift; sourceTree = "<group>"; };
 		30BEFD0E2CC52AAF002748A2 /* GHItemInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHItemInfoView.swift; sourceTree = "<group>"; };
 		30BEFD102CC53DB8002748A2 /* GHItemInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHItemInfoVC.swift; sourceTree = "<group>"; };
+		30BEFD122CC55CE1002748A2 /* GHRepoItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHRepoItemVC.swift; sourceTree = "<group>"; };
+		30BEFD142CC56644002748A2 /* GHFollowerItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHFollowerItemVC.swift; sourceTree = "<group>"; };
 		30CF64DB2CC43B490096E272 /* UserInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoVC.swift; sourceTree = "<group>"; };
 		30F2B3782CA1AEA900FA05E7 /* GHTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHTitleLabel.swift; sourceTree = "<group>"; };
 		30F3A7B72CA2FFC100547DC2 /* GHBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHBodyLabel.swift; sourceTree = "<group>"; };
@@ -127,9 +131,9 @@
 		300179E32CC3F658006B1640 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				30BEFD162CC566F9002748A2 /* ItemInfoVC */,
 				30F3A7B92CA300A300547DC2 /* GHAlertVC.swift */,
 				30BEFD0A2CC529AC002748A2 /* GHUserInfoHeaderVC.swift */,
-				30BEFD102CC53DB8002748A2 /* GHItemInfoVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -245,6 +249,16 @@
 			path = GitHubFollowers;
 			sourceTree = "<group>";
 		};
+		30BEFD162CC566F9002748A2 /* ItemInfoVC */ = {
+			isa = PBXGroup;
+			children = (
+				30BEFD102CC53DB8002748A2 /* GHItemInfoVC.swift */,
+				30BEFD122CC55CE1002748A2 /* GHRepoItemVC.swift */,
+				30BEFD142CC56644002748A2 /* GHFollowerItemVC.swift */,
+			);
+			path = ItemInfoVC;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -326,7 +340,9 @@
 				30704DBA2CBA7C53004E4E78 /* UIHelper.swift in Sources */,
 				30515F5E2CA6B58F00C8E5E5 /* UIViewController+Ext.swift in Sources */,
 				30ABBD162C924E2C00F9349C /* GHTextField.swift in Sources */,
+				30BEFD132CC55CE1002748A2 /* GHRepoItemVC.swift in Sources */,
 				3064DA8B2CAD494B00EEEF81 /* FollowerCell.swift in Sources */,
+				30BEFD152CC56644002748A2 /* GHFollowerItemVC.swift in Sources */,
 				30BEFD072CC527DD002748A2 /* GHError.swift in Sources */,
 				300179E52CC3F702006B1640 /* GHEmptyState.swift in Sources */,
 				30BEFD0F2CC52AAF002748A2 /* GHItemInfoView.swift in Sources */,

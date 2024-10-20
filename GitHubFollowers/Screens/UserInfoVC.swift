@@ -39,6 +39,8 @@ class UserInfoVC: UIViewController {
             case .success(let user):
                 DispatchQueue.main.async {
                     self.add(childVC: GHUserInfoHeaderVC(user: user), to: self.headerView)
+                    self.add(childVC: GHRepoItemVC(user: user), to: self.itemViewOne)
+                    self.add(childVC: GHFollowerItemVC(user: user), to: self.itemViewTwo)
                 }
             case .failure(let error):
                 self.presentGHAlertOnMainThread(title: "Something went wrong", message: error.rawValue, buttonTitle: "OK")
@@ -55,13 +57,6 @@ class UserInfoVC: UIViewController {
             view.addSubview(itemView)
             itemView.translatesAutoresizingMaskIntoConstraints = false
         }
-    
-        
-        
-        
-        itemViewOne.backgroundColor = .systemPink
-        itemViewTwo.backgroundColor = .systemPink
-        
    
         
         let padding: CGFloat = 20
