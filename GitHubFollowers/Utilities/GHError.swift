@@ -12,5 +12,7 @@ enum GHError: String, Error {
     case unableToComplete = "Unable to complete request. Check internet"
     case invalidResponse = "Invalid responce from the server"
     case invvalidData = "The data received from server is invalid"
+    case unableToFavorites = "There was an error while trying to favorite"
+    case alreadyInFavorites = "You are already favorited this user"
 }
  
