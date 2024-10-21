@@ -14,6 +14,8 @@ class GHItemInfoVC: UIViewController {
     let itemInfoTwo = GHItemInfoView()
     let actionButton = GHButton()
     
+    weak var delegate: UserInfoVCDelegate!
+    
     var user: User!
     
     init(user: User) {
@@ -30,6 +32,7 @@ class GHItemInfoVC: UIViewController {
         configureBackground()
         layoutUI()
         configureStackView()
+        configureActionButton() 
 
     }
     
@@ -45,6 +48,14 @@ class GHItemInfoVC: UIViewController {
         
         stackView.addArrangedSubview(itemInfoOne)
         stackView.addArrangedSubview(itemInfoTwo)
+    }
+    
+    private func configureActionButton() {
+        actionButton.addTarget(self, action: #selector(actionButtonTapped), for: .touchUpInside)
+    }
+    
+    @objc func actionButtonTapped() {
+        
     }
     
     private func layoutUI() {
