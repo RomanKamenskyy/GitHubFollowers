@@ -16,7 +16,7 @@ class GHRepoItemVC: GHItemInfoVC {
     private func configureItems() {
         itemInfoOne.set(itemInfoType: .repos, withCount: user.publicRepos)
         itemInfoTwo.set(itemInfoType: .gists, withCount: user.publicGists)
-        actionButton.set(backgroundColor: .systemPurple, title: "GitHub profile")
+        actionButton.set(color: .systemPurple, title: "GitHub profile")
         
     }
     override func actionButtonTapped() {
