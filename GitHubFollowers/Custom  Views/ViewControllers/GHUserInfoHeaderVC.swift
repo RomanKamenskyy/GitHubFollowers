@@ -36,7 +36,7 @@ class GHUserInfoHeaderVC: UIViewController {
     }
     
     func configureUIElement() {
-        avatarImageView.downloadAvatarImage(from: user.avatarUrl)
+        avatarImageView.downloadImage(fromURL: user.avatarUrl)
         usernameLabel.text = user.login
         nameLabel.text = user.name ?? ""
         locationLabel.text = user.location ?? "No location"

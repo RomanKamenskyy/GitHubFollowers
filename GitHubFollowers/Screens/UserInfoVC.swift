@@ -40,19 +40,20 @@ class UserInfoVC: UIViewController {
         
     }
     func getUserInfo() {
-        NetworkManager.shared.getUserInfo(for: username) { [weak self] result in
-            guard let self = self else { return }
-            
-            switch result {
-            case .success(let user):
-                DispatchQueue.main.async {
-                    self.configureUIElement(with: user)
+        
+        Task {
+            do {
+                let user = try await NetworkManager.shared.getUserInfo(for: username)
+                configureUIElement(with: user)
+            } catch {
+                if let ghError = error as? GHError {
+                    presentGHAlert(title: "Something went wrong", message: ghError.rawValue, buttonTitle: "OK")
                 }
-            case .failure(let error):
-                self.presentGHAlertOnMainThread(title: "Something went wrong", message: error.rawValue, buttonTitle: "OK")
+                else {
+                    presentDefaultError()
+                }
             }
         }
-        
     }
      
     func configureUIElement(with user: User){
@@ -122,7 +123,7 @@ class UserInfoVC: UIViewController {
 extension UserInfoVC: UserInfoVCDelegate {
     func didTappedGitHubProfile(for user: User) {
         guard let url = URL(string: user.htmlUrl) else {
-            presentGHAlertOnMainThread(title: "Invalid URL", message: "The url attached to this user is invalid", buttonTitle: "OK")
+            presentGHAlert(title: "Invalid URL", message: "The url attached to this user is invalid", buttonTitle: "OK")
             return
         }
         presentSafariVC(with: url)
@@ -131,7 +132,7 @@ extension UserInfoVC: UserInfoVCDelegate {
     
     func didTappedFollowers(for user: User) {
         guard user.followers != 0 else {
-            presentGHAlertOnMainThread(title: "No followers to display", message: "This user has no followers", buttonTitle: "Ok")
+            presentGHAlert(title: "No followers to display", message: "This user has no followers", buttonTitle: "Ok")
             return
         }
         delegate.didRequestFollowers(for: user.login )

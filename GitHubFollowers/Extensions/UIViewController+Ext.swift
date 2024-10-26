@@ -11,13 +11,21 @@ import SafariServices
 
 
 extension UIViewController {
-    func presentGHAlertOnMainThread (title: String, message: String, buttonTitle: String){
-        DispatchQueue.main.async {
-            let alertVC = GHAlertVC(alertTitle: title, message: message, buttonTitle: buttonTitle)
-            alertVC.modalPresentationStyle = .overFullScreen
-            alertVC.modalTransitionStyle = .crossDissolve
-            self.present(alertVC, animated: true)
-        }
+    
+    func presentGHAlert (title: String, message: String, buttonTitle: String){
+        let alertVC = GHAlertVC(alertTitle: title, message: message, buttonTitle: buttonTitle)
+        alertVC.modalPresentationStyle = .overFullScreen
+        alertVC.modalTransitionStyle = .crossDissolve
+        present(alertVC, animated: true)
+    }
+    
+    func presentDefaultError (){
+        let alertVC = GHAlertVC(alertTitle: "Something went wrong",
+                                message: "We were unable to complete your task. Please try again later.",
+                                buttonTitle: "Ok")
+        alertVC.modalPresentationStyle = .overFullScreen
+        alertVC.modalTransitionStyle = .crossDissolve
+        present(alertVC, animated: true)
     }
     
     func presentSafariVC(with url: URL) {

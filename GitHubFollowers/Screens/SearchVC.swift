@@ -43,7 +43,7 @@ class SearchVC: UIViewController {
     @objc func pushFollowersListVC() {
         
         guard isUsernamePressed else {
-            presentGHAlertOnMainThread(title: "Empty username", message: "Please enter a username. We need to know who to look for.😃", buttonTitle: "OK")
+            presentGHAlert(title: "Empty username", message: "Please enter a username. We need to know who to look for.😃", buttonTitle: "OK")
             return
         }
         usernametextField.resignFirstResponder()

@@ -11,7 +11,7 @@ class FavoriteVC: GHDataLoadingView {
     
     let tableView = UITableView()
     var favorites: [Follower] = []
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureViewController()
@@ -55,7 +55,7 @@ class FavoriteVC: GHDataLoadingView {
                     }
                 }
             case .failure(let error):
-                presentGHAlertOnMainThread(title: "Something went wrong", message: error.rawValue, buttonTitle: "Ok")
+                presentGHAlert(title: "Something went wrong", message: error.rawValue, buttonTitle: "Ok")
             }
         }
     }
@@ -90,8 +90,10 @@ extension FavoriteVC: UITableViewDelegate, UITableViewDataSource {
                 self.favorites.remove(at: indexPath.row)
                 self.tableView.deleteRows(at: [indexPath], with: .left)
                 return }
+            DispatchQueue.main.async {
+                self.presentGHAlert(title: "Unable to remove", message: error.rawValue, buttonTitle: "Ok")
+            }
             
-            self.presentGHAlertOnMainThread(title: "Unable to remove", message: error.rawValue, buttonTitle: "Ok")
         }
     }
 }
