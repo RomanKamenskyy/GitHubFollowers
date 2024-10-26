@@ -5,7 +5,7 @@ to set and save a favorite GitHub user. The user can search for a specific follo
 among these subscribers and can click on a follower from this list to get more
 information about that follower.
 
-# How to build
+## How to build
 
 1. Clone the repository
 
