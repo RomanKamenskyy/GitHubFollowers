@@ -8,16 +8,13 @@ information about that follower.
 ## How to build
 
 1. Clone the repository
-
-   ```bash
-   $ git clone https://github.com/tuist/XcodeProj.git
-    ```
-
+```bash
+$ git clone https://github.com/tuist/XcodeProj.git
+```
 2.  Open the workspace in Xcode
-   
-   ```bash
-   $ open "GitHubFollowers.xcworkspace"
-   ```
+```bash
+$ open "GitHubFollowers.xcworkspace"
+```
 
 ## Requirements
    iOS 17+
