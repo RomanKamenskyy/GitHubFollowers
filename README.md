@@ -11,9 +11,12 @@ information about that follower.
 
    ```bash
    $ git clone https://github.com/tuist/XcodeProj.git
+    ```
 
 2.  Open the workspace in Xcode
    ```bash
    $ open "GitHubFollowers.xcworkspace"
+   ```
 
-# Requirements
+
+## Requirements
