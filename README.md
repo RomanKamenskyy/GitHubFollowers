@@ -20,3 +20,4 @@ information about that follower.
 
 
 ## Requirements
+   iOS 17+
