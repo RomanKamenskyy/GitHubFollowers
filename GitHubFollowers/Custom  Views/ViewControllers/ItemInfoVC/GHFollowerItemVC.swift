@@ -17,12 +17,9 @@ class GHFollowerItemVC: GHItemInfoVC {
         itemInfoOne.set(itemInfoType: .followers, withCount: user.followers)
         itemInfoTwo.set(itemInfoType: .followers, withCount: user.following)
         actionButton.set(color: .systemGreen , title: "Get followers")
-        
     }
     
     override func actionButtonTapped() {
         delegate.didTappedFollowers(for: user)
     }
-    
-    
 }

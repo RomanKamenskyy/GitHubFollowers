@@ -12,12 +12,10 @@ class SearchVC: UIViewController {
     let logoGHImageView = UIImageView()
     let usernametextField = GHTextField()
     let actionButton = GHButton(backgroundColor: .systemGreen, title: "Get followers")
-    
     var isUsernamePressed: Bool {
         !usernametextField.text!.isEmpty
     }
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -41,7 +39,6 @@ class SearchVC: UIViewController {
     }
     
     @objc func pushFollowersListVC() {
-        
         guard isUsernamePressed else {
             presentGHAlert(title: "Empty username", message: "Please enter a username. We need to know who to look for.😃", buttonTitle: "OK")
             return
@@ -53,7 +50,7 @@ class SearchVC: UIViewController {
         followersListVC.title = usernametextField.text
         navigationController?.pushViewController(followersListVC, animated: true)
     }
-   
+    
     func configureLogoImage() {
         view.addSubview(logoGHImageView)
         logoGHImageView.translatesAutoresizingMaskIntoConstraints = false
@@ -70,9 +67,7 @@ class SearchVC: UIViewController {
     
     func configureTextField() {
         view.addSubview(usernametextField)
-        
         usernametextField.delegate = self
-        
         
         NSLayoutConstraint.activate([
             usernametextField.topAnchor.constraint(equalTo: logoGHImageView.bottomAnchor, constant: 48),
@@ -94,14 +89,11 @@ class SearchVC: UIViewController {
             actionButton.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
-
 }
 
 extension SearchVC: UITextFieldDelegate {
-    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         pushFollowersListVC()
         return true
     }
-    
 }

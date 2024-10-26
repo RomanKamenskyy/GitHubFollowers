@@ -28,17 +28,13 @@ enum PersistenceManager {
                         completed(.alreadyInFavorites)
                         return
                     }
-                    
                     favorites.append(favorite)
                 case .remove:
                     favorites.removeAll { $0.login == favorite.login }
                 }
-                
                 completed(save(favorites: favorites))
-                
             case .failure(let error):
                 completed(error)
-                
             }
         }
     }
@@ -52,16 +48,13 @@ enum PersistenceManager {
         do {
             let decoder = JSONDecoder()
             let favorites = try decoder.decode([Follower].self, from: favoitesData )
-            //completed(followers, nil)
             completed(.success(favorites))
-                
         } catch {
             completed(.failure(.unableToFavorites))
         }
     }
     
     static func save(favorites: [Follower]) -> GHError? {
-        
         do {
             let encoder = JSONEncoder()
             let encodeFavorites = try encoder.encode(favorites)

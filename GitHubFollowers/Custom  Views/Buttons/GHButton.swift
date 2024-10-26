@@ -21,7 +21,6 @@ class GHButton: UIButton {
     convenience init(backgroundColor: UIColor, title: String) {
         self.init(frame: .zero)
         set(color: backgroundColor, title: title)
-        
     }
     
     private func configure() {
@@ -35,7 +34,5 @@ class GHButton: UIButton {
         configuration?.baseForegroundColor = color 
         self.backgroundColor = backgroundColor
         self.setTitle(title, for: .normal)
-        
     }
-    
 }

@@ -14,13 +14,13 @@ class GHDataLoadingView: UIViewController {
     func showLoadingView() {
         containerView = UIView(frame: view.bounds)
         view.addSubview(containerView)
-        
         view.backgroundColor = .systemBackground
         containerView.alpha = 0
         
         UIView.animate(withDuration: 0.25) {
             self.containerView.alpha = 0.9
         }
+        
         let activityIndicator = UIActivityIndicatorView(style: .large)
         containerView.addSubview(activityIndicator)
         activityIndicator.translatesAutoresizingMaskIntoConstraints = false
@@ -29,10 +29,10 @@ class GHDataLoadingView: UIViewController {
             activityIndicator.centerYAnchor.constraint(equalTo: containerView.centerYAnchor),
             activityIndicator.centerXAnchor.constraint(equalTo: containerView.centerXAnchor)
         ])
-        
+
         activityIndicator.startAnimating()
-        
     }
+    
     func dismissLoadingView() {
         DispatchQueue.main.async {
             self.containerView.removeFromSuperview()
@@ -40,12 +40,9 @@ class GHDataLoadingView: UIViewController {
         }
     }
     
-    
-    
     func showEmptySateView(with message: String, in view: UIView) {
         let emptyStateView = GHEmptyState(message: message)
         emptyStateView.frame = view.bounds
         view.addSubview(emptyStateView)
-        
     } 
 }

@@ -43,9 +43,7 @@ class GHItemInfoVC: UIViewController {
     
     private func configureStackView() {
         stackView.axis = .horizontal
-        
         stackView.distribution = .equalSpacing
-        
         stackView.addArrangedSubview(itemInfoOne)
         stackView.addArrangedSubview(itemInfoTwo)
     }
@@ -54,9 +52,7 @@ class GHItemInfoVC: UIViewController {
         actionButton.addTarget(self, action: #selector(actionButtonTapped), for: .touchUpInside)
     }
     
-    @objc func actionButtonTapped() {
-        
-    }
+    @objc func actionButtonTapped() {}
     
     private func layoutUI() {
         view.addSubview(stackView)

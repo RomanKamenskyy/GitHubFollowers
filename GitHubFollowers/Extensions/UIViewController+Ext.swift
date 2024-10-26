@@ -8,10 +8,7 @@
 import UIKit
 import SafariServices
 
-
-
 extension UIViewController {
-    
     func presentGHAlert (title: String, message: String, buttonTitle: String){
         let alertVC = GHAlertVC(alertTitle: title, message: message, buttonTitle: buttonTitle)
         alertVC.modalPresentationStyle = .overFullScreen
@@ -33,6 +30,4 @@ extension UIViewController {
         safariVC.preferredBarTintColor = .systemGreen
         present(safariVC, animated: true)
     }
-    
-    
 }

@@ -46,8 +46,5 @@ class FavoriteCell: UITableViewCell {
             usernameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -padding),
             usernameLabel.heightAnchor.constraint(equalToConstant: 40)
         ])
-        
     }
-    
-
 }

@@ -13,10 +13,7 @@ protocol FollowersListVCDelegate: AnyObject {
 
 class FollowersListVC: GHDataLoadingView {
     
-    
-    enum Section {
-        case main
-    }
+    enum Section { case main }
     
     var username: String!
     var followers: [Follower] = []
@@ -28,8 +25,6 @@ class FollowersListVC: GHDataLoadingView {
     var isSearching: Bool = false
     var isLoadingMoreFollowers = false
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureCollectionView()
@@ -39,14 +34,26 @@ class FollowersListVC: GHDataLoadingView {
         configureSearchController()
         
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
-    
-    
+    override func updateContentUnavailableConfiguration(using state: UIContentUnavailableConfigurationState) {
+        if followers.isEmpty {
+            var config = UIContentUnavailableConfiguration.empty()
+            config.image = .init(systemName: "persin.slash")
+            config.text = "No followers"
+            config.secondaryText = "This user has no followers."
+            contentUnavailableConfiguration = config
+        } else if isSearching && filteredFollowers.isEmpty  {
+            contentUnavailableConfiguration = UIContentUnavailableConfiguration.search()
+        } else {
+            contentUnavailableConfiguration = nil
+        }
+    }
     
     func configureCollectionView () {
         collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: UIHelper.createThreeColomnFlowLayout(in: view))
@@ -55,6 +62,7 @@ class FollowersListVC: GHDataLoadingView {
         collectionView.backgroundColor = .systemBackground
         collectionView.register(FollowerCell.self, forCellWithReuseIdentifier: FollowerCell.reuseID)
     }
+    
     func configureViewController() {
         view.backgroundColor = .systemBackground
         navigationController?.navigationBar.prefersLargeTitles = true
@@ -71,10 +79,6 @@ class FollowersListVC: GHDataLoadingView {
         navigationItem.searchController = searchController
     }
     
-
-            //            guard let followers = try? await NetworkManager.shared.getFollowers(for: username, page: page) else {
-            //                return
-            //            }
     func getFollowers(username: String, page: Int) {
         showLoadingView()
         isLoadingMoreFollowers = true
@@ -97,20 +101,12 @@ class FollowersListVC: GHDataLoadingView {
         }
     }
     
-    
-    
-    
     func updateUI(with followers: [Follower]) {
         if followers.count < 100 { self.hasMoreFollowers = false }
         self.followers.append(contentsOf: followers)
         
-        if self.followers.isEmpty {
-            let message = "This user doesn't have any followers. Go follow them 😀."
-            DispatchQueue.main.async { self.showEmptySateView(with: message, in: self.view) }
-            return
-        }
-        
         self.updateData(on: self.followers)
+        setNeedsUpdateContentUnavailableConfiguration()
     }
     
     func configureDataSource() {
@@ -128,7 +124,6 @@ class FollowersListVC: GHDataLoadingView {
         DispatchQueue.main.async {
             self.dataSource.apply(snapshot, animatingDifferences: true)
         }
-        
     }
     
     @objc func addButtonTapped() {
@@ -145,7 +140,6 @@ class FollowersListVC: GHDataLoadingView {
                 } else {
                     presentDefaultError()
                 }
-                
                 dismissLoadingView()
             }
         }
@@ -156,15 +150,12 @@ class FollowersListVC: GHDataLoadingView {
         
         PersistenceManager.updateWith(favorite: favorite, actionType: .add) { [weak self] error in
             guard let self = self else { return }
-            
             guard let error = error else {
                 DispatchQueue.main.async {
                     self.presentGHAlert(title: "Success!", message: "You have successfully favorited this user 🎉", buttonTitle: "Hooray!")
                 }
-                
                 return
             }
-            
             DispatchQueue.main.async {
                 self.presentGHAlert(title: "Something went wrong", message: error.rawValue, buttonTitle: "Ok")
             }
@@ -173,7 +164,6 @@ class FollowersListVC: GHDataLoadingView {
 }
 
 extension FollowersListVC: UICollectionViewDelegate {
-    
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         let offsetY = scrollView.contentOffset.y
         let contentHeigt = scrollView.contentSize.height
@@ -189,7 +179,6 @@ extension FollowersListVC: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let activeArray = isSearching ? filteredFollowers : followers
         let follower = activeArray[indexPath.row]
-        
         let destinationVC = UserInfoVC()
         destinationVC.username = follower.login
         destinationVC.delegate = self
@@ -209,7 +198,7 @@ extension FollowersListVC: UISearchResultsUpdating {
         isSearching = true
         filteredFollowers = followers.filter{$0.login.lowercased().contains(filter.lowercased())}
         updateData(on: filteredFollowers)
-        
+        setNeedsUpdateContentUnavailableConfiguration()
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {

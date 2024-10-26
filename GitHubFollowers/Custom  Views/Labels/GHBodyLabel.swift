@@ -21,7 +21,6 @@ class GHBodyLabel: UILabel {
     convenience init(textAlignment: NSTextAlignment){
         self.init(frame: .zero)
         self.textAlignment = textAlignment
-      
     }
     
     private func configure() {
@@ -32,5 +31,4 @@ class GHBodyLabel: UILabel {
         lineBreakMode = .byWordWrapping
         translatesAutoresizingMaskIntoConstraints = false
     }
-    
 }

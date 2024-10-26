@@ -23,7 +23,6 @@
 		30704DBA2CBA7C53004E4E78 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30704DB92CBA7C52004E4E78 /* UIHelper.swift */; };
 		30804BEF2C90BF2400FA7398 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30804BEE2C90BF2400FA7398 /* AppDelegate.swift */; };
 		30804BF12C90BF2400FA7398 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30804BF02C90BF2400FA7398 /* SceneDelegate.swift */; };
-		30804BF62C90BF2400FA7398 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 30804BF52C90BF2400FA7398 /* Base */; };
 		30804BF82C90BF2600FA7398 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30804BF72C90BF2600FA7398 /* Assets.xcassets */; };
 		30804BFB2C90BF2600FA7398 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 30804BFA2C90BF2600FA7398 /* Base */; };
 		30ABBD142C923F5100F9349C /* GHButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30ABBD132C923F5100F9349C /* GHButton.swift */; };
@@ -241,8 +240,8 @@
 		3064DA892CAD490A00EEEF81 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				3064DA8A2CAD494B00EEEF81 /* FollowerCell.swift */,
 				30310E7D2CC710AD00E51BA0 /* FavoriteCell.swift */,
+				3064DA8A2CAD494B00EEEF81 /* FollowerCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -348,7 +347,6 @@
 			files = (
 				30804BF82C90BF2600FA7398 /* Assets.xcassets in Resources */,
 				30804BFB2C90BF2600FA7398 /* Base in Resources */,
-				30804BF62C90BF2400FA7398 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -552,7 +550,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -582,7 +580,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

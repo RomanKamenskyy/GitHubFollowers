@@ -33,6 +33,18 @@ class FavoriteVC: GHDataLoadingView {
         tableView.register(FavoriteCell.self, forCellReuseIdentifier: FavoriteCell.reuseID)
     }
     
+    override func updateContentUnavailableConfiguration(using state: UIContentUnavailableConfigurationState) {
+        if favorites.isEmpty {
+            var config = UIContentUnavailableConfiguration.empty()
+            config.image = .init(systemName: "star")
+            config.text = "No favorites yet"
+            config.secondaryText = "Add followers to your favorites to see them here."
+            contentUnavailableConfiguration = config
+        } else {
+            contentUnavailableConfiguration = nil
+        }
+    }
+    
     func configureViewController() {
         view.backgroundColor = .systemBlue
         title = "Favorites"
@@ -45,18 +57,19 @@ class FavoriteVC: GHDataLoadingView {
             guard let self = self else { return }
             switch result {
             case .success(let favorites):
-                if favorites.isEmpty {
-                    self.showEmptySateView(with: "No favorites yet", in: self.view)
-                } else {
-                    self.favorites = favorites
-                    DispatchQueue.main.async {
-                        self.tableView.reloadData()
-                        self.view.bringSubviewToFront(self.tableView)
-                    }
-                }
+                updateUI(with: favorites)
             case .failure(let error):
                 presentGHAlert(title: "Something went wrong", message: error.rawValue, buttonTitle: "Ok")
             }
+        }
+    }
+    
+    func updateUI(with favorites: [Follower]) {
+        setNeedsUpdateContentUnavailableConfiguration()
+        self.favorites = favorites
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+            self.view.bringSubviewToFront(self.tableView)
         }
     }
 }
@@ -72,6 +85,7 @@ extension FavoriteVC: UITableViewDelegate, UITableViewDataSource {
         cell.set(favorite: favorite)
         return cell
     }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let favorite = favorites[indexPath.row]
         let destVC = FollowersListVC()
@@ -89,11 +103,11 @@ extension FavoriteVC: UITableViewDelegate, UITableViewDataSource {
             guard let error = error else {
                 self.favorites.remove(at: indexPath.row)
                 self.tableView.deleteRows(at: [indexPath], with: .left)
+                setNeedsUpdateContentUnavailableConfiguration()
                 return }
             DispatchQueue.main.async {
                 self.presentGHAlert(title: "Unable to remove", message: error.rawValue, buttonTitle: "Ok")
             }
-            
         }
     }
 }

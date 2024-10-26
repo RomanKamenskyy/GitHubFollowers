@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 protocol UserInfoVCDelegate: AnyObject {
     func didTappedGitHubProfile(for user: User)
     func didTappedFollowers(for user: User)
@@ -20,27 +19,24 @@ class UserInfoVC: UIViewController {
     let itemViewTwo = UIView()
     let dateLabel = GHBodyLabel(textAlignment: .center)
     var itemViews: [UIView] = []
-    
     var username: String!
     var delegate: FollowersListVCDelegate!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
         configureViewController()
         layoutUI()
         getUserInfo()
-       
-        
     }
+    
     func configureViewController() {
         view.backgroundColor = .systemBackground
         let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(dismissVC))
         navigationItem.rightBarButtonItem =  doneButton
-        
     }
+    
     func getUserInfo() {
-        
         Task {
             do {
                 let user = try await NetworkManager.shared.getUserInfo(for: username)
@@ -55,9 +51,8 @@ class UserInfoVC: UIViewController {
             }
         }
     }
-     
+    
     func configureUIElement(with user: User){
-        
         let repoItemVC = GHRepoItemVC(user: user)
         repoItemVC.delegate = self
         
@@ -71,14 +66,12 @@ class UserInfoVC: UIViewController {
     }
     
     func layoutUI() {
-        
         itemViews = [headerView, itemViewOne, itemViewTwo, dateLabel]
         
         for itemView in itemViews {
             view.addSubview(itemView)
             itemView.translatesAutoresizingMaskIntoConstraints = false
         }
-   
         
         let padding: CGFloat = 20
         let itemHeight: CGFloat = 140
@@ -102,8 +95,6 @@ class UserInfoVC: UIViewController {
             dateLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding),
             dateLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
             dateLabel.heightAnchor.constraint(equalToConstant: 18)
-             
-           
         ])
     }
     
@@ -119,7 +110,6 @@ class UserInfoVC: UIViewController {
     }
 }
 
-
 extension UserInfoVC: UserInfoVCDelegate {
     func didTappedGitHubProfile(for user: User) {
         guard let url = URL(string: user.htmlUrl) else {
@@ -127,7 +117,6 @@ extension UserInfoVC: UserInfoVCDelegate {
             return
         }
         presentSafariVC(with: url)
-       
     }
     
     func didTappedFollowers(for user: User) {
@@ -137,11 +126,5 @@ extension UserInfoVC: UserInfoVCDelegate {
         }
         delegate.didRequestFollowers(for: user.login )
         dismissVC()
-            
-        
     }
-    
-    
-    
-    
 }

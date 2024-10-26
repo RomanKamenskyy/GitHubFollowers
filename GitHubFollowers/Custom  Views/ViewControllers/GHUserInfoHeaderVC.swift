@@ -32,7 +32,6 @@ class GHUserInfoHeaderVC: UIViewController {
         addSubviews()
         layoutUI()
         configureUIElement()
-        
     }
     
     func configureUIElement() {
@@ -42,10 +41,8 @@ class GHUserInfoHeaderVC: UIViewController {
         locationLabel.text = user.location ?? "No location"
         bioLabel.text = user.bio ?? ""
         bioLabel.numberOfLines = 3
-        
         locationImageView.image = SFSymbols.location
         locationImageView.tintColor = .secondaryLabel
-        
     }
     
     func addSubviews() {
@@ -95,8 +92,5 @@ class GHUserInfoHeaderVC: UIViewController {
             bioLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
             bioLabel.heightAnchor.constraint(equalToConstant: 60)
         ])
-        
-        
     }
-    
 }

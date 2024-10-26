@@ -9,7 +9,6 @@ import UIKit
 
 class GHSecondaryTitleLabel: UILabel {
 
-
     override init(frame: CGRect) {
         super.init(frame: frame)
         configure()
@@ -32,5 +31,4 @@ class GHSecondaryTitleLabel: UILabel {
         lineBreakMode = .byTruncatingTail
         translatesAutoresizingMaskIntoConstraints = false
     }
-    
 }

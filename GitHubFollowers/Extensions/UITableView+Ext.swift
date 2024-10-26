@@ -18,5 +18,4 @@ extension UITableView {
     func removeExcessCell() {
         tableFooterView = UIView(frame: .zero)
     }
-    
 }

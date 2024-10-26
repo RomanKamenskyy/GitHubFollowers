@@ -22,7 +22,6 @@ class GHTitleLabel: UILabel {
         self.init(frame: .zero)
         self.textAlignment = textAlignment
         self.font = UIFont.systemFont(ofSize: fontSize, weight: .bold)
-        
     }
     
     private func configure() {
@@ -32,5 +31,4 @@ class GHTitleLabel: UILabel {
         lineBreakMode = .byTruncatingTail
         translatesAutoresizingMaskIntoConstraints = false
     }
-    
 }
