@@ -14,10 +14,10 @@ information about that follower.
     ```
 
 2.  Open the workspace in Xcode
+   
    ```bash
    $ open "GitHubFollowers.xcworkspace"
    ```
-
 
 ## Requirements
    iOS 17+
