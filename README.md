@@ -33,10 +33,10 @@ Network Layer:
 - SafariServices.
 
 ## Screenshots
-<img width="529" alt="screenshot1" src="https://github.com/user-attachments/assets/6170b832-9479-4cf1-b24e-8b37a2641971">
-<img width="529" alt="screenshot4" src="https://github.com/user-attachments/assets/8da9623c-0eb8-4c21-b434-616738f30195">
-<img width="529" alt="screenshot2" src="https://github.com/user-attachments/assets/1414d9eb-7ad0-4011-ab2f-f1051fd3b3dc">
-<img width="529" alt="screenshot5" src="https://github.com/user-attachments/assets/09b8c2fb-6e80-48d6-8460-86c4e4b5e69a">
+<img width="459" alt="screenshot1" src="https://github.com/user-attachments/assets/6170b832-9479-4cf1-b24e-8b37a2641971">
+<img width="459" alt="screenshot4" src="https://github.com/user-attachments/assets/8da9623c-0eb8-4c21-b434-616738f30195">
+<img width="459" alt="screenshot2" src="https://github.com/user-attachments/assets/1414d9eb-7ad0-4011-ab2f-f1051fd3b3dc">
+<img width="459" alt="screenshot5" src="https://github.com/user-attachments/assets/09b8c2fb-6e80-48d6-8460-86c4e4b5e69a">
 
 ![git1](https://github.com/user-attachments/assets/c241b418-54d9-4636-9f9c-2f39dffb22f8)
 ![gif2](https://github.com/user-attachments/assets/6f4407df-eeeb-4be0-81a5-3768ad312e6e)
