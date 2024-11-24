@@ -5,7 +5,7 @@ among these subscribers and can click on a follower from this list to get more i
 ## How to build
 1. Clone the repository
 ```bash
-$ git clone https://github.com/tuist/XcodeProj.git
+$ git clone https://github.com/RomanKamenskyy/GitHubFollowers.git
 ```
 2.  Open the workspace in Xcode
 ```bash
